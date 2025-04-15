@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masukkan Kode Hadiah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 250px;
+      margin-bottom: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Masukkan Kode untuk Mendapatkan Hadiah</h2>
+    <input type="text" id="kode" placeholder="Masukkan kode di sini" />
+    <br />
+    <button onclick="cekKode()">Kirim</button>
+    <div class="error" id="errorMsg"></div>
+  </div>
+
+  <script>
+    const kodeBenar = "00000";
+    const linkHadiah = "https://link.dana.id/danakaget?c=stzxk9dxj&r=gG6E86&orderId=20250415101214844215010300166662417888888";
+
+    function cekKode() {
+      const input = document.getElementById("kode").value;
+      const errorDiv = document.getElementById("errorMsg");
+
+      if (input === kodeBenar) {
+        window.location.href = linkHadiah;
+      } else {
+        errorDiv.textContent = "Kode salah, coba lagi.";
+      }
+    }
+  </script>
+</body>
+</html>
