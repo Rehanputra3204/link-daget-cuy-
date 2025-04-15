@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Masukkan Kode Hadiah</title>
+  <title>Masukkan Jawaban Hadiah</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,25 +39,25 @@
 </head>
 <body>
   <div class="container">
-    <h2>Masukkan Kode Hadiah</h2>
-    <input type="text" id="kode" placeholder="Masukkan kode di sini" />
+    <h2>Masukkan Jawaban</h2>
+    <input type="text" id="Jawaban" placeholder="Masukkan Jawaban di sini" />
     <br/>
-    <button onclick="cekKode()">Kirim</button>
+    <button onclick="cekJawaban()">Kirim</button>
     <div class="error" id="errorMsg"></div>
   </div>
 
   <script>
-    const kodeBenar = "00000";
-    const linkHadiah = "https://link.dana.id/danakaget?c=stzxk9dxj&r=gG6E86&orderId=20250415101214844215010300166662417888888";
+    const JawabanBenar = "00000";
+    const linkHadiah = "https://link.dana.id/danakaget?c=sakaz9lnj&r=gG6E86&orderId=20250415101214973715010300166662417893111";
 
-    function cekKode() {
-      const input = document.getElementById("kode").value;
+    function cekJawaban() {
+      const input = document.getElementById("jawaban").value;
       const errorMsg = document.getElementById("errorMsg");
 
-      if (input === kodeBenar) {
+      if (input === JawabanBenar) {
         window.location.href = linkHadiah;
       } else {
-        errorMsg.textContent = "Kode salah, coba lagi.";
+        errorMsg.textContent = "jawaban salah, coba lagi.";
       }
     }
   </script>
